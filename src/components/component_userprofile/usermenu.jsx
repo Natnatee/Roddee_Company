@@ -57,7 +57,7 @@ function UserMenu() {
             {user && user.Profile_Image ? (
               <img src={user.Profile_Image} alt="Profile" className="h-[94px] w-[94px] rounded-full object-cover" />
             ) : (
-              <p className="text-2xl flex justify-center items-center">No Pic</p>
+              <p className="text-2xl">KS</p>
             )}
           </div>
           <p className="text-[16px] text-white font-semibold flex justify-center mt-6">

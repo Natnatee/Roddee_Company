@@ -47,15 +47,15 @@ const CarSlideshow = () => {
 
   return (
     <section id="SlideShow" className="flex flex-col">
-      <div id="carImagesMain" className="md:relative mt-auto pointer-events-auto md:h-2/6 h-[240px]">
+      <div id="carImagesMain" className="relative mt-auto pointer-events-auto h-2/6">
         <div className="relative w-full h overflow-hidden">
           <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {slides.map((item, index) => (
               <div className="w-full flex-shrink-0 h-[500px]" key={index}>
                 <a href={item.href} title={item.alt}>
-                  <picture className="block w-full  h-[220px]">
+                  <picture className="block w-full h-[500px]">
                     <source media="(min-width:1024px)" srcSet={item.src} className="w-full h-[500px] object-cover" />
-                    <img src={item.src} className="w-full h-[270px] md:h-[500px] object-cover" alt={item.alt} />
+                    <img src={item.src} className="w-full h-[500px] object-cover" alt={item.alt} />
                   </picture>
                 </a>
               </div>

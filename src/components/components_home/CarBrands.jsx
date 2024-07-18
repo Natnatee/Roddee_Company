@@ -2,6 +2,7 @@ import Audi from "../../assets/Logo/carLogo/audi-logo.jpg";
 import BMW from "../../assets/Logo/carLogo/BMW.jpg";
 import Jaguar from "../../assets/Logo/carLogo/Jaguar.jpg";
 import LandRover from "../../assets/Logo/carLogo/Land-Rover.jpg";
+
 import MercedesBenz from "../../assets/Logo/carLogo/Mercedes-Benz-removebg-preview.png";
 import Mini from "../../assets/Logo/carLogo/Mini-logo.jpg";
 import Peugeot from "../../assets/Logo/carLogo/Peugeot.jpg";
@@ -41,7 +42,7 @@ const CarBrands = () => {
       <h2 className="text-xl font-bold mb-4 mt-4 text-center">
         ยี่ห้อรถยนต์ทั้งหมด
       </h2>
-      <div className="flex md:justify-center gap-4 ">
+      <div className="flex justify-center gap-4 ">
         {carBrands.map((brand, index) => (
           <div key={index} className="shadow rounded-xl flex-shrink-0 " >
               <img

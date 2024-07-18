@@ -17,8 +17,6 @@ const Banner = () => {
   const bannerRef = useRef(null);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
-  const [isFullScreen, setIsFullScreen] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(null);
 
   const handleBanner = () => {
     if (bannerRef.current) {
@@ -38,16 +36,6 @@ const Banner = () => {
     if (bannerRef.current) {
       bannerRef.current.scrollBy({ left: 1152, behavior: "smooth" });
     }
-  };
-
-  const handleSlideClick = (slide) => {
-    setCurrentSlide(slide);
-    setIsFullScreen(true);
-  };
-
-  const handleCloseFullScreen = () => {
-    setIsFullScreen(false);
-    setCurrentSlide(null);
   };
 
   useEffect(() => {
@@ -84,8 +72,7 @@ const Banner = () => {
                 <img
                   src={slide.src}
                   alt={slide.alt}
-                  className=" object-cover rounded-lg   hover:scale-110 duration-300 cursor-pointer"
-                  onClick={() => handleSlideClick(slide)}
+                  className=" object-cover rounded-lg   hover:scale-110 duration-300"
                 />
               </div>
             ))}
@@ -100,19 +87,6 @@ const Banner = () => {
           )} */}
         </div>
       </div>
-
-      {isFullScreen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-          onClick={handleCloseFullScreen}
-        >
-          <img
-            src={currentSlide.src}
-            alt={currentSlide.alt}
-            className="max-w-full max-h-full"
-          />
-        </div>
-      )}
     </section>
   );
 };

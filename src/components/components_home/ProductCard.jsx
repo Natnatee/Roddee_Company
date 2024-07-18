@@ -41,7 +41,7 @@ export const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="bg-white rounded-[20px] shadow flex flex-col w-[360px] h-auto pb-3 hover:bg-gray-300 duration-200  border-[0.5px]">
+    <div className="bg-white rounded-[20px] shadow flex flex-col w-[360px] h-[320px] hover:bg-gray-300 duration-200  border-[0.5px]">
       <div>
         <div className="flex justify-between items-center ">
           <Tooltip content={`${product.headline}`}>
@@ -66,7 +66,7 @@ export const ProductCard = ({ product }) => {
           </div>
         </div>
         <div className="flex justify-between items-center">
-          <h3 className="text-[12px] ml-6">{product.type}</h3>
+          <h3 className="font-light text-[12px] ml-6">{product.type}</h3>
         </div>
       </div>
       <img

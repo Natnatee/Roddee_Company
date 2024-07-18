@@ -228,14 +228,14 @@ function Sell() {
       </h5>
       <div className=" gap-[56px] mb-[62px] flex flex-col w-full">
         <div className="flex items-center justify-between ">
-          <label className=" text-gray-700 text-[18px] font-medium ">
+          <label className=" text-gray-700 text-[18px] font-medium">
             หัวข้อรถที่ต้องการขาย
           </label>
 
           <input
             type="text"
             name="headline"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="เช่น BMW X1 2021 สภาพดี ไมล์น้อย"
             value={formData.headline}
             onChange={handleChange}
@@ -251,7 +251,7 @@ function Sell() {
           </label>
           <select
             name="brand"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] py-0 duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] py-0"
             placeholder="เลือกแบรนด์"
             value={formData.brand}
             onChange={handleChange}
@@ -279,7 +279,7 @@ function Sell() {
           <input
             type="text"
             name="model"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="รุ่นโมเดลของรถ"
             value={formData.model}
             onChange={handleChange}
@@ -296,7 +296,7 @@ function Sell() {
           <input
             type="text"
             name="type"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="เลือกประเภทรถยนต์"
             value={formData.type}
             onChange={handleChange}
@@ -309,7 +309,7 @@ function Sell() {
           <input
             type="number"
             name="year"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="ปีรถ"
             value={formData.year}
             onChange={handleChange}
@@ -324,7 +324,7 @@ function Sell() {
           <input
             type="number"
             name="mileage"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="ระบุเลขไมล์"
             value={formData.mileage}
             onChange={handleChange}
@@ -339,7 +339,7 @@ function Sell() {
           <input
             type="text"
             name="color"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="เลือกสี"
             value={formData.color}
             onChange={handleChange}
@@ -355,7 +355,7 @@ function Sell() {
           </label>
           <select
             name="fuel"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]  py-0 duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]  py-0  "
             placeholder="เลือก เชื้อเพลิง"
             value={formData.fuel}
             onChange={handleChange}
@@ -376,7 +376,7 @@ function Sell() {
           <input
             type="number"
             name="enginecap"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="ความจุเครื่องยนต์"
             value={formData.enginecap}
             onChange={handleChange}
@@ -392,7 +392,7 @@ function Sell() {
           </label>
           <select
             name="cushion"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] py-0 duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]  py-0"
             placeholder="ประเภท เบาะ"
             value={formData.cushion}
             onChange={handleChange}
@@ -413,7 +413,7 @@ function Sell() {
           <input
             type="number"
             name="seat"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="เลือก จำนวนที่นั่ง"
             value={formData.seat}
             onChange={handleChange}
@@ -427,7 +427,7 @@ function Sell() {
           </label>
           <select
             name="gear"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] py-0 duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]  py-0"
             placeholder="เลือกเกียร์"
             value={formData.gear}
             onChange={handleChange}
@@ -446,7 +446,7 @@ function Sell() {
           <input
             type="number"
             name="price"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="ระบุราคาเต็ม ไม่ใช่ราคาดาวน์"
             value={formData.price}
             onChange={handleChange}
@@ -463,7 +463,7 @@ function Sell() {
           <input
             type="text"
             name="pnumber"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="เบอร์มือถือ เช่น 09xxxxxxxx"
             value={formData.pnumber}
             onChange={handleChange}
@@ -480,7 +480,7 @@ function Sell() {
           <input
             type="text"
             name="address"
-            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px] h-[56px] p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="เลือกจังหวัด, อำเภอ"
             value={formData.address}
             onChange={handleChange}
@@ -496,7 +496,7 @@ function Sell() {
           </label>
           <textarea
             name="additionalInfo"
-            className="w-[744px]  p-5 text-base border border-gray-300 rounded-[15px] duration-300"
+            className="w-[744px]  p-5 text-base border border-gray-300 rounded-[15px]"
             placeholder="ใส่รายละเอียดเพิ่มเติม เช่น เข้าศูนย์เช็คตลอด, ไม่เคยชน"
             rows="4"
             value={formData.additionalInfo}

@@ -64,7 +64,7 @@ function UploadProfile() {
 
     try {
       const response = await uploadProfilePicture(userId, formData.Profile_Image);
-      console.log('อัปเดทรูปโปรไฟล์เสร็จสิ้น', response);
+      console.log('Profile image updated successfully', response);
       if (userId && formData.Profile_Image) {
         alert(
           `Profile image updated successfully`

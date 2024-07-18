@@ -26,4 +26,13 @@ function ChangePassPage() {
   );
 }
 
+
+function App() {
+  return (
+    <div className="font-inter">
+      <h1 className="text-2xl">Hello, world!</h1>
+      <p>This is a paragraph using the Inter font.</p>
+    </div>
+  );
+}
 export default ChangePassPage;

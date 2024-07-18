@@ -10,7 +10,7 @@ import roddeenew from "../assets/Logo/Roddee logo final.png";
 function Footer() {
   return (
     <footer className="flex bg-[#1E3769] text-white p-4 justify-center">
-      <section className="md:justify-between justify-around flex w-[1128px]">
+      <section className="justify-between flex w-[1128px]">
         <div className="flex flex-col mt-5">
           <img src={roddeenew} className="h-8 w-fit mb-2" />
           <p className="font-semibold">Roddee Co., Ltd</p>
@@ -28,8 +28,8 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div className="pt-6 md:block hidden">
-          <h3 className="font-bold mb-2 text-lg ">เกี่ยวกับเรา</h3>
+        <div className="pt-6 ">
+          <h3 className="font-bold mb-2 text-lg">เกี่ยวกับเรา</h3>
           <Link to="/">
             <p>ที่ตั้งของเรา</p>
           </Link>
@@ -40,7 +40,7 @@ function Footer() {
             <p>ทำไมต้องเลือก Roddee?</p>
           </Link>
         </div>
-        <div className="pt-6 md:block hidden">
+        <div className="pt-6 ">
           <h3 className="font-bold mb-2 text-lg">บริการของเรา</h3>
 
           <Link to="/">
@@ -53,7 +53,7 @@ function Footer() {
           <p>ซื้อรถยนต์</p>
         </Link> */}
         </div>
-        <div className="pt-6 md:block hidden">
+        <div className="pt-6 ">
           <h3 className="font-bold mb-2 text-lg">ความช่วยเหลือ</h3>
           <Link to="/">
             <p>คำถามที่พบบ่อย</p>

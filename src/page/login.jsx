@@ -11,7 +11,6 @@ import { useContext } from "react";
 
 
 
-
 function LoginAndRegister() {
   const [email, setEmail] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
@@ -27,7 +26,6 @@ function LoginAndRegister() {
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
   // const [isRegistering, setIsRegistering] = useState(false);
   const [loginError, setLoginError] = useState("");
-  const [registerError, setRegisterError] = useState("");
   
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -168,41 +166,18 @@ function LoginAndRegister() {
     }
   }
   // function กดปุ่ม Register
-   const handleRegister = async () => {
-    if (
-      !firstName ||
-      !lastName ||
-      !registerEmail ||
-      !registerPassword ||
-      !confirmPassword ||
-      !pnumber
-    ) {
-      setRegisterError("กรุณากรอกข้อมูลให้ครบทุกช่อง");
-      return;
-    }
-
-    if (!emailErrorRegister && !passwordErrorRegister && !confirmPasswordError) {
-      try {
-        const user = await registerUser(
-          firstName,
-          lastName,
-          registerEmail,
-          registerPassword,
-          confirmPassword,
-          pnumber
-        );
-        if (user && user.access_token) {
-          localStorage.setItem("token", user.access_token);
-          navigate("/");
-        } else {
-          alert(`โปรดยืนยันอีเมลล์ที่ ${registerEmail}`);
-          navigate("/");
-        }
-      } catch (error) {
-        setRegisterError(`เนื่องจาก api เป็น version trial เลยใช้ได้แค่mailของทีมงานในการสมัคร`);
+  const handleRegister = async () => {
+    if (!emailError && !passwordError && registerPassword === confirmPassword) {
+      const user = await registerUser(firstName, lastName, registerEmail, registerPassword, confirmPassword, pnumber);
+      if (user && user.access_token) {
+        localStorage.setItem("token", user.access_token);
+        navigate("/");
+      } else {
+        alert("Please verify your email to complete registration");
+        navigate("/");
       }
     } else {
-      setRegisterError("กรุณาแก้ไขข้อผิดพลาดในแบบฟอร์ม");
+      alert("Please fix the errors in the form or make sure passwords match");
     }
   };
 
@@ -237,12 +212,12 @@ function LoginAndRegister() {
       
       <img
         src={Tesla}
-        className="md:w-full absolute object-cover md:max-h-screen lg:max-h-screen md:h-auto h-full "
+        className="w-full h-[911px] absolute object-cover "
         alt="Loginbg"
       />
 
       <div className="flex justify-center">
-        <div className="w-[1440px] relative flex md:justify-end justify-center">
+        <div className="w-[1440px] relative flex justify-end ">
           <form
             onSubmit={handleSubmit}
             className={`bg-white h-[772px] w-[456px] absolute mt-[104px] rounded-[10px] shadow-md transition opacity duration-500  
@@ -251,7 +226,6 @@ function LoginAndRegister() {
                     ? "opacity-100 pointer-events-auto"
                     : "opacity-0 pointer-events-none"
                 }`}
-                noValidate
           >
             <div className="mx-[48px] mt-[128px]">
               <span className="text-[24px] font-bold">ยินดีต้อนรับกลับมา!</span>
@@ -339,7 +313,7 @@ function LoginAndRegister() {
                 <span className="mx-4 -mt-3 text-gray-500 text-sm">หรือ</span>
                 <div className="flex-grow border-t-[0.5px] border-gray-400"></div>
               </div>
-              
+
               <button
                 type="button"
                 onClick={handleToggleForm}
@@ -363,7 +337,6 @@ function LoginAndRegister() {
                     ? "opacity-0 pointer-events-none"
                     : "opacity-100 pointer-events-auto"
                 }`}
-                noValidate
             // className={`bg-white h-[772px] w-[456px] relative mt-[104px] rounded-[10px] shadow-md transition-transform duration-500 ${isRegistering ? 'translate-x-20' : 'translate-x-0'}`}
           >
             <div className="mx-[48px] mt-[16px]">
@@ -484,9 +457,29 @@ function LoginAndRegister() {
                 )}
               </div>
 
-             
+              {/* <div className="flex ">
+                <div className="flex">
+                  <div className="flex items-center">
+                    <input
+                      id="terms"
+                      type="checkbox"
+                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-primary-300"
+                      required="true"
+                    />
+                  </div>
+                  <div className="ml-3 text-[12px] place-self-center">
+                    ยอมรับ
+                  </div>
+                </div>
 
-              {registerError && <p className="text-red-500 text-[12px]">{registerError}</p>}
+                <div>
+                  <a href="#" className="text-[12px]  text-red-600 ">
+                    เงื่อนไขสำหรับการสมัครสมาชิกและนโยบายความเป็นส่วนตัว
+                  </a>
+                </div>
+              </div> */}
+
+      
               <button
                 type="submit"
                 className=" text-white bg-[#1E3769] mt-[16px] mb-[32px] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-[6px] text-sm text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 w-[360px] h-[40px]"

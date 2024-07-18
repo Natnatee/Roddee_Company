@@ -41,7 +41,7 @@ function Navbar({ className }) {
   // Effect to decode token, set userId information and fetch user data
 
   return (
-    <nav className={`${className} bg-blue-950 text-white max-md:fixed w-full shadow-md`}>
+    <nav className={`${className} bg-blue-950 text-white max-md:fixed w-full`}>
       <div className="flex justify-between mx-4 h-14">
         <ul className="flex gap-12">
           <Link to="/" onClick={scrollToTop} className="flex gap-1 items-center">
@@ -75,17 +75,14 @@ function Navbar({ className }) {
           </div>
         </ul>
 
-        <div className="flex gap-3">
-          <Link to="/" className="flex flex-col justify-center  mt-2">
+        <div className="flex gap-8">
+          <Link to="/" className="flex flex-col justify-center mr-3">
             <img className="md:hidden" src={thaiflag} alt="USA Flag" />
-          </Link>
-          <Link to="/loginandregister" className="flex flex-col justify-center  ">
-            <img className="md:hidden h-7" src={profile} alt="USA Flag" />
           </Link>
           <Link className="flex flex-col justify-center mr-3">
             <img
               onClick={handleBurger}
-              className="md:hidden h-9  "
+              className="md:hidden"
               src={burger}
               alt="Menu"
             />
@@ -94,10 +91,10 @@ function Navbar({ className }) {
 
         {/* Desktop */}
         {User ? (
-          <ul className="flex items-center gap-8 mr-8 max-md:hidden ">
+          <ul className="flex items-center gap-8 mr-8 max-md:hidden">
             <li>
               <Link onClick={scrollToTop} to="/">
-                <img src={thaiflag} alt="USA Flag" className="mt-2"/>
+                <img src={thaiflag} alt="USA Flag" />
               </Link>
             </li>
             {/* <li>
@@ -107,7 +104,7 @@ function Navbar({ className }) {
             </li> */}
             <li className="bg-white rounded-full text-black py-1 px-3 flex">   
               <Link onClick={scrollToTop} to="/edituser">
-                <img src={User.Profile_Image} alt="profile" className="h-8 w-[32px] rounded-full mr-4 "/>
+                <img src={User.Profile_Image} alt="profile" className="h-8 rounded-full mr-4"/>
               </Link>
               <h1 className="font-semibold place-content-center">{User.FirstName}</h1>
             </li>
@@ -144,29 +141,29 @@ function Navbar({ className }) {
 
       {/* Mobile */}
       {open && (
-        <ul className="flex justify-center flex-col items-center bg-gray-600 text-white text-4xl py-36 gap-16 md:hidden rounded-lg">
+        <ul className="flex justify-center flex-col items-center bg-gray-600 text-white text-4xl py-36 gap-16 md:hidden">
           <li>
             <Link
-              className="hover:bg-blue-950 py-4 px-28 text-[24px] rounded-2xl duration-200"
+              className="hover:bg-blue-950 py-4 px-28"
               onClick={handleBurger}
-              to="/buy"
+              to="/sell"
             >
               ต้องการซื้อ
             </Link>
           </li>
           <li>
             <Link
-              className="hover:bg-blue-950 py-4 px-28 text-[24px] rounded-2xl duration-200"
+              className="hover:bg-blue-950 py-4 px-28"
               onClick={handleBurger}
-              to="/sell"
+              to="/buy"
             >
               ต้องการขาย
             </Link>
           </li>
           <li>
             <Link
-              className="bg-gray-800 py-4 px-36 w-full hover:bg-blue-950 text-[24px] rounded-2xl duration-200"
-              to="/loginandregister"
+              className="bg-gray-800 py-4 px-36 w-full hover:bg-blue-950"
+              to="/login"
             >
               Login
             </Link>

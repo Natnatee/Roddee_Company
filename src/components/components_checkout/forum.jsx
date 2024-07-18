@@ -24,7 +24,7 @@ function Forum({ data }) {
           value={transaction.address}
           onChange={handleChange}
           placeholder="ที่อยู่"
-          className="  h-[56px] mb-6   px-5 rounded-2xl border border-[#E1E1E1] font-medium text-base duration-300"
+          className="  h-[56px] mb-6   px-5 rounded-2xl border border-[#E1E1E1] font-medium text-base"
         />
         <label className="font-medium text-sm mb-2 ">ข้อมูลเพิ่มเติม</label>
         <input
@@ -33,7 +33,7 @@ function Forum({ data }) {
           value={transaction.etc}
           onChange={handleChange}
           placeholder="ข้อมูลเพิ่มเติม (ถ้ามี) "
-          className=" h-[56px] mb-6   px-5 rounded-2xl border border-[#E1E1E1] font-medium text-base duration-300"
+          className=" h-[56px] mb-6   px-5 rounded-2xl border border-[#E1E1E1] font-medium text-base"
         />
         <label className="font-medium text-sm mb-2 ">เลือกวันที่รับรถ</label>
         <input
@@ -42,7 +42,7 @@ function Forum({ data }) {
           value={transaction.Sell_Date}
           onChange={handleChange}
           placeholder="เลือกวันที่"
-          className=" h-[56px]   px-5 rounded-2xl border border-[#E1E1E1]  font-medium text-base duration-300"
+          className=" h-[56px]   px-5 rounded-2xl border border-[#E1E1E1]  font-medium text-base"
         />
       </div>
       <div
@@ -55,7 +55,7 @@ function Forum({ data }) {
         </div>
         <Link
           to="/Checkout2"
-          className=" h-[48px] bg-[#3E5685] rounded-[10px] text-white text-2xl flex justify-center duration-300"
+          className=" h-[48px] bg-[#3E5685] rounded-[10px] text-white text-2xl flex justify-center"
           state={transaction}
         >
           <input

@@ -104,8 +104,8 @@ export const Selldata = () => {
       </div>
       {Array.isArray(searchResults) && searchResults.length > 0 ? (
         <>
-          <div className="md:grid md:place-items-center ">
-            <div className="md:mt-12 md:grid md:grid-cols-3 md:w-[1128px] md:gap-6 mb-12 mt-4 flex flex-col gap-y-4 items-center">
+          <div className="md:grid md:place-items-center">
+            <div className="md:mt-12 md:grid md:grid-cols-3 md:w-[1128px] md:gap-6 mb-12">
               {searchResults
                 .slice(indexOfFirstImage, indexOfLastImage)
                 .map((product, index) => (

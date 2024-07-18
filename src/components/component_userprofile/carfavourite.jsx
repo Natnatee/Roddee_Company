@@ -22,8 +22,8 @@ function CarFavourite() {
     return (
         <div >
             <div className="flex flex-col border border-[#E1E1E1] rounded-[20px] px-6 pt-[28px] ">
-                <p className="font text-[24px] font-semibold mb-6">รายการโปรด</p>
-                <div className="grid grid-cols-2 mb-6 ">
+                <p className="font text-[24px] font-semibold  mb-6">รายการโปรด</p>
+                <div className="grid grid-cols-2 mb-6">
                     {cars.map((car, index) => (
                         <div key={car._id || index}>
                             <ProductCard product={car} />

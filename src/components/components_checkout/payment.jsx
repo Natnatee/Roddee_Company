@@ -66,23 +66,23 @@ function Payment({ data }) {
           <input
             type="number"
             placeholder="เลขบัตร"
-            className=" h-[56px]  px-5 mb-8 rounded-[15px] border border-[#E1E1E1] text-base font-medium duration-300"
+            className=" h-[56px]  px-5 mb-8 rounded-[15px] border border-[#E1E1E1] text-base font-medium"
           />
           <input
-            type="text"
+            type="number"
             placeholder="ชื่อเจ้าของบัตร"
-            className=" h-[56px]  px-5  mb-8 rounded-[15px] border border-[#E1E1E1]  text-base font-medium duration-300"
+            className=" h-[56px]  px-5  mb-8 rounded-[15px] border border-[#E1E1E1]  text-base font-medium"
           />
           <div className="flex flex-row gap-6 mb-4 ">
             <input
               type="number"
               placeholder="CVV"
-              className=" h-[56px]  px-5 w-full rounded-[15px] border border-[#E1E1E1] text-base font-medium duration-300"
+              className=" h-[56px]  px-5 w-full rounded-[15px] border border-[#E1E1E1] text-base font-medium"
             />
             <input
               type="text"
               placeholder="Expiration MM/YY"
-              className=" h-[56px]  px-5 w-full   rounded-[15px] border border-[#E1E1E1] text-base font-medium duration-300"
+              className=" h-[56px]  px-5 w-full   rounded-[15px] border border-[#E1E1E1] text-base font-medium"
             />
           </div>
 
